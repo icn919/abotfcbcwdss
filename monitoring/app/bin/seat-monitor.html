@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                color: antiquewhite;
+                padding: auto;
+            }
+        </style>
+    </head>
+    <body>        
+        <script>
+            function getAdafruit(adafruitObject){
+                $.get("https://io.adafruit.com/api/v2/gveloria/feeds/"+adafruitObject+"/data/retain?x-aio-key=aio_vKiv07vdwEnb1QdO50AgL30yvhX4", function(data, status){
+                    var dataArr=data.split(',');
+                    if(dataArr[0]=='0'){
+                        document.getElementById(adafruitObject).setAttribute("fill", "olivedrab");
+                    }
+                    else{
+                        document.getElementById(adafruitObject).setAttribute("fill", "firebrick");
+                    }
+                    });
+            }
+
+            setInterval(function(){
+                getAdafruit("seat1");
+                getAdafruit("seat2");
+                getAdafruit("seat3");
+                getAdafruit("seat4");
+            },1000);
+        </script>
+        <table style="margin: auto;">
+            <tr>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="seat1" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">A1</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="seat2" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">A2</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="75" height="100">
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="seat3" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">A3</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="seat4" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">A4</text>
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">B1</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">B2</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="75" height="100">
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">B3</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">B4</text>
+                    </svg>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">C1</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">C2</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="75" height="100">
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">C3</text>
+                    </svg>
+                </td>
+                <td>
+                    <svg width="100" height="100">
+                        <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                        <text x="40" y="55" fill="antiquewhite">C4</text>
+                    </svg>
+                </td>
+                <tr>
+                    <td>
+                        <svg width="100" height="100">
+                            <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                            <text x="40" y="55" fill="antiquewhite">D1</text>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg width="100" height="100">
+                            <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                            <text x="40" y="55" fill="antiquewhite">D2</text>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg width="75" height="100">
+                        </svg>
+                    </td>
+                    <td>
+                        <svg width="100" height="100">
+                            <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                            <text x="40" y="55" fill="antiquewhite">D3</text>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg width="100" height="100">
+                            <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                            <text x="40" y="55" fill="antiquewhite">D4</text>
+                        </svg>
+                    </td>
+                    <tr>
+                        <td>
+                            <svg width="100" height="100">
+                                <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                                <text x="40" y="55" fill="antiquewhite">E1</text>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg width="100" height="100">
+                                <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                                <text x="40" y="55" fill="antiquewhite">E2</text>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg width="75" height="100">
+                            </svg>
+                        </td>
+                        <td>
+                            <svg width="100" height="100">
+                                <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                                <text x="40" y="55" fill="antiquewhite">E3</text>
+                            </svg>
+                        </td>
+                        <td>
+                            <svg width="100" height="100">
+                                <circle id="" cx="50" cy="50" r="40" stroke="grey" stroke-width="4" />
+                                <text x="40" y="55" fill="antiquewhite">E4</text>
+                            </svg>
+                        </td>
+                    </tr>
+            
+        </table>
+
+    </body>
+</html>
