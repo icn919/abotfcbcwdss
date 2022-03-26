@@ -30,7 +30,7 @@
             $sql = "UPDATE users SET name ='{$name}', username ='{$username}' WHERE id='{$id}'";
     $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
-            $session->msg('s',"Account updated ");
+            $session->msg('s',"Acount updated ");
             redirect('edit_account.php', false);
           } else {
             $session->msg('d',' Sorry failed to updated!');
